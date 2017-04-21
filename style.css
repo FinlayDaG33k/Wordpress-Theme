@@ -5,8 +5,8 @@
  * Author URI: https://www.finlaydag33k.nl
  * Description: Custom made theme for my blog :)
  * Version: 0.1
- * License: GNU General Public License v4 or later
- * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ * License: FINLAYDAG33K LICENSE
+ * License URI: See below for the license ffs
  * Tags: idk
  * Text Domain: finlaydag33k
  *
@@ -32,6 +32,11 @@ html,body {
 #wrap {
   /* Margin bottom by footer height */
   margin-bottom: 128px;
+}
+
+code{
+	background-color: inherit;
+	font-size: 100%;
 }
 
 .footer {
@@ -234,10 +239,6 @@ p.logged-in-as {
   display: flex;
 }
 
-div[class*='col-'] {
-  flex:1 1 auto;
-  display: flex;
-}
 .panel {
   flex:1 0 100%;
 }
