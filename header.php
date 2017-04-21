@@ -2,7 +2,7 @@
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/inc/css/bootstrap.min.css" type="text/css" media="screen,projection" />
-<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/inc/css/assets.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/inc/css/font-awesome.min.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/inc/css/prism.cssn.css" type="text/css" />
 <script type="text/javascript" src="<?php bloginfo("template_url"); ?>/inc/js/jquery.min.js"></script>
