@@ -129,3 +129,14 @@ function h_func($atts, $content = null){
 	return "<hr><h3 class=\"text-primary\">".$content."</h3>";
 }
 add_shortcode( 'h', 'h_func' );
+
+
+/*
+	[card]
+	arguments:
+	takes content as cardname
+*/
+function card_func($atts, $content = null){
+	return "<a href=\"http://gatherer.wizards.com/Pages/Card/Details.aspx?name=".$content."\" target=\"_blank\">".$content."</a>";
+}
+add_shortcode( 'card', 'card_func' );
