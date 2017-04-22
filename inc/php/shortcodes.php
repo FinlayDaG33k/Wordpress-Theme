@@ -1,7 +1,7 @@
 <?php
 /* [paragraph] */
 function paragraph_func(){
-	return "<br />";
+	return "&nbsp;<br />&nbsp;<br />";
 }
 add_shortcode( 'paragraph', 'paragraph_func' );
 
