@@ -100,7 +100,6 @@ p.logged-in-as {
     list-style: none;
 }
 .comment .comment-body {
-  background-color: #ffffff;
   margin: 0;
   overflow: hidden;
   padding: 25px;
