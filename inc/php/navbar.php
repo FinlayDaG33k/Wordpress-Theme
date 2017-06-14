@@ -15,15 +15,10 @@
 					wp_nav_menu( array(
 						'menu'              => 'primary',
 						'depth'             => 7,
-						'container'         => 'div',
-						'container_class'   => 'navbar-collapse collapse',
 						'menu_class'        => 'nav navbar-nav',
 						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 						'walker'            => new wp_bootstrap_navwalker())
 					);
-					if (has_nav_menu('primary')) {
-					wp_nav_menu($args);
-					}
 				?>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
