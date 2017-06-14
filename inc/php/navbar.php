@@ -9,23 +9,22 @@
 			</button>
 			<a class="navbar-brand" href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>
 		</div>
-		<div class="collapse navbar-collapse navbar-responsive-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-left">
-				<?php
-					wp_nav_menu( array(
-						'menu'              => 'primary',
-						'depth'             => 7,
-						'container'         => 'div',
-						'container_class'   => 'navbar-collapse collapse',
-						'menu_class'        => 'nav navbar-nav',
-						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-						'walker'            => new wp_bootstrap_navwalker())
-					);
-					if (has_nav_menu('primary')) {
-					wp_nav_menu($args);
-					}
-				?>
-			</ul>
+		<div class="navbar navbar-default" role="navigation">
+			<?php
+				wp_nav_menu( array(
+					'menu'			  	=> 'primary',
+					'depth'			 	=> 7,
+					'container'		 	=> 'div',
+					'container_class'   => 'navbar-collapse collapse',
+					'container_id'	  	=> 'bs-example-navbar-collapse-1',
+					'menu_class'		=> 'nav navbar-nav navbar-left',
+					'fallback_cb'	   	=> 'wp_bootstrap_navwalker::fallback',
+					'walker'			=> new wp_bootstrap_navwalker())
+				);
+				if (has_nav_menu('primary')) {
+				wp_nav_menu($args);
+				}
+			?>
 			<ul class="nav navbar-nav navbar-right">
 				<form class="navbar-form navbar-left" action="<?php echo esc_url( site_url() ); ?>" role="search">
 					<div class="form-group">
