@@ -12,7 +12,7 @@ function list_issues_func(){
 	if(count($issues) > 0){
 		$issuesList = "<ul>";
 		foreach($issues as $issue => $value){
-			$issuesList .= "<li><a href=\"".$value['html_url']."\" target=\"_blank\">#".$value['number']."</a>: ".$value['title']." (by ".$value['user']['login'].")</li>";
+			$issuesList .= "<li><a href=\"".htmlentities($value['html_url'])."\" target=\"_blank\">#".htmlentities($value['number'])."</a>: ".htmlentities($value['title'])." (by ".htmlentities($value['user']['login']).")</li>";
 		}
 		$issuesList .= "</ul>";
 		return $issuesList;
