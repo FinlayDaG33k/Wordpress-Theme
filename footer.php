@@ -10,5 +10,5 @@
 	<script>
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-</P
+</p>
 <?php wp_footer(); ?>
