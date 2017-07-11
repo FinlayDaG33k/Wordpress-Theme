@@ -60,4 +60,11 @@ require('inc/php/shortcodes.php');
 
 /* Custom Filters */
 require('inc/php/filters.php');
+
+/* Simplify logging to console */
+function jslog($content){
+  ?>
+    <script>console.log("<?= htmlentities($content); ?>");</script>
+  <?php
+}
 ?>
