@@ -1,12 +1,16 @@
 <?php
 /* Load Sentry.io Raven */
-require_once('inc/php/Raven/Autoloader.php');
-Raven_Autoloader::register();
-$ravenClient = new Raven_Client('<YOUR_RAVEN_ID>');
-$error_handler = new Raven_ErrorHandler($ravenClient);
-$error_handler->registerExceptionHandler();
-$error_handler->registerErrorHandler();
-$error_handler->registerShutdownFunction();
+if(!empty(get_option('phpsentryio_url'))){
+  require_once('inc/php/Raven/Autoloader.php');
+  Raven_Autoloader::register();
+  $ravenClient = new Raven_Client(get_option('phpsentryio_url'));
+  $error_handler = new Raven_ErrorHandler($ravenClient);
+  $error_handler->registerExceptionHandler();
+  $error_handler->registerErrorHandler();
+  $error_handler->registerShutdownFunction();
+}else{
+  jslog("No Sentry.io URL entered, please consider setting it up!");
+}
 
 /* Navbar setup */
 require_once('inc/php/wp_bootstrap_navwalker.php');
@@ -76,4 +80,7 @@ function jslog($content){
     <script>console.log("<?= htmlentities($content); ?>");</script>
   <?php
 }
+
+/* Theme settings page */
+require('inc/php/theme_settings.php');
 ?>

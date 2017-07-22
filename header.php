@@ -9,6 +9,15 @@
 <script type="text/javascript" src="<?php bloginfo("template_url"); ?>/inc/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo("template_url"); ?>/inc/js/prism.js"></script>
+
+<?php if(!empty(get_option('jssentryio_url'))){ ?>
+  <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
+  <script>
+    Raven.config('<?= htmlentities(get_option('jssentryio_url')); ?>').install();
+  </script>
+<?php } ?>
+
+
 <script type="text/javascript">
   $(document).ready(function () {
     var actualImgWidth = 0;
