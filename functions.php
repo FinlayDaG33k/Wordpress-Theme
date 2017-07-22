@@ -1,4 +1,13 @@
 <?php
+/* Load Sentry.io Raven */
+require_once('inc/php/Raven/Autoloader.php');
+Raven_Autoloader::register();
+$ravenClient = new Raven_Client('<YOUR_RAVEN_ID>');
+$error_handler = new Raven_ErrorHandler($ravenClient);
+$error_handler->registerExceptionHandler();
+$error_handler->registerErrorHandler();
+$error_handler->registerShutdownFunction();
+
 /* Navbar setup */
 require_once('inc/php/wp_bootstrap_navwalker.php');
 
