@@ -11,9 +11,18 @@
 <script type="text/javascript" src="<?php bloginfo("template_url"); ?>/inc/js/prism.js"></script>
 
 <?php if(!empty(get_option('jssentryio_url'))){ ?>
+  <!-- Main Raven -->
   <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
   <script>
     Raven.config('<?= htmlentities(get_option('jssentryio_url')); ?>').install();
+  </script>
+
+  <!-- Raven Feedback -->
+  <script>
+    function handleRouteError(err) {
+      Raven.captureException(err);
+      Raven.showReportDialog();
+    };
   </script>
 <?php } ?>
 
