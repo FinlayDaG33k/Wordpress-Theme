@@ -26,18 +26,6 @@
   </script>
 <?php } ?>
 
-
-<script type="text/javascript">
-  $(document).ready(function () {
-    var actualImgWidth = 0;
-    $(".panel-wrap").each(function () {
-			$(this).css({
-     		"width": $("img", this).width() + 30,
-			});
-    });
-  });
-</script>
-
 <script>
 (function($){
     $(document).ready(function(){
