@@ -30,6 +30,9 @@ function display_theme_panel_fields(){
 
   add_settings_field("jssentryio_url", "JS Sentry.io URL", "display_jssentryio_element", "theme-settings", "section");
   register_setting("section", "jssentryio_url");
+
+  add_settings_field("AnalyticsID", "Analytics ID", "display_analyticsid_element", "theme-settings", "section");
+  register_setting("section", "AnalyticsID");
 }
 add_action("admin_init", "display_theme_panel_fields");
 
@@ -42,6 +45,12 @@ function display_phpsentryio_element(){
 function display_jssentryio_element(){
 	?>
     <input type="text" name="jssentryio_url" id="jssentryio_url" value="<?php echo get_option('jssentryio_url'); ?>" />
+  <?php
+}
+
+function display_analyticsid_element(){
+	?>
+    <input type="text" name="AnalyticsID" id="AnalyticsID" value="<?php echo get_option('AnalyticsID'); ?>" />
   <?php
 }
 ?>
