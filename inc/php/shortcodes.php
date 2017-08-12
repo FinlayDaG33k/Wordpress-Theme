@@ -32,3 +32,7 @@ include('shortcodes/table.php');
 include('shortcodes/keybase_sites.php');
 /* [list_issues] */
 include('shortcodes/list_issues.php');
+/* [disclaimer] */
+include('shortcodes/disclaimer.php');
+/* [quote] */
+include('shortcodes/quote.php');

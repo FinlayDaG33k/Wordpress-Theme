@@ -1,4 +1,5 @@
 <?php
+ini_set('memory_limit','-1'); // I just like being a cunt :)
 /* Load Sentry.io Raven */
 if(!empty(get_option('phpsentryio_url'))){
   require_once('inc/php/Raven/Autoloader.php');
@@ -68,18 +69,29 @@ function no_privates($where) {
 }
 add_filter('posts_where', 'no_privates');
 
+/* So we can generate random strings */
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
+/* Simplify logging to console */
+function jslog($content){
+  ?>
+    <script>console.log("[Wordpress Theme] <?= htmlentities($content); ?>");</script>
+  <?php
+}
+
 /* Custom Shorttags */
 require('inc/php/shortcodes.php');
 
 /* Custom Filters */
 require('inc/php/filters.php');
-
-/* Simplify logging to console */
-function jslog($content){
-  ?>
-    <script>console.log("<?= htmlentities($content); ?>");</script>
-  <?php
-}
 
 /* Theme settings page */
 require('inc/php/theme_settings.php');
