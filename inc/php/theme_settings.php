@@ -33,6 +33,9 @@ function display_theme_panel_fields(){
 
   add_settings_field("AnalyticsID", "Analytics ID", "display_analyticsid_element", "theme-settings", "section");
   register_setting("section", "AnalyticsID");
+
+  add_settings_field("WatermarkURL", "Watermark URL", "display_watermarkurl_element", "theme-settings", "section");
+  register_setting("section", "WatermarkURL");
 }
 add_action("admin_init", "display_theme_panel_fields");
 
@@ -51,6 +54,12 @@ function display_jssentryio_element(){
 function display_analyticsid_element(){
 	?>
     <input type="text" name="AnalyticsID" id="AnalyticsID" value="<?php echo get_option('AnalyticsID'); ?>" />
+  <?php
+}
+
+function display_watermarkurl_element(){
+	?>
+    <input type="text" name="WatermarkURL" id="WatermarkURL" value="<?php echo get_option('WatermarkURL'); ?>" />
   <?php
 }
 ?>

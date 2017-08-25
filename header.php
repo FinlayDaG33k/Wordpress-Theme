@@ -1,6 +1,13 @@
 <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="<?php if ( is_single() ) {
+        single_post_title('', true);
+    } else {
+        bloginfo('name'); echo " - "; bloginfo('description');
+    }
+    ?>" />
+
 <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/inc/css/bootstrap.min.css" type="text/css" media="screen,projection" />
 <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/inc/css/font-awesome.min.css" type="text/css" />
