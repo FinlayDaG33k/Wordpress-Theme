@@ -36,6 +36,9 @@ function display_theme_panel_fields(){
 
   add_settings_field("WatermarkURL", "Watermark URL", "display_watermarkurl_element", "theme-settings", "section");
   register_setting("section", "WatermarkURL");
+
+  add_settings_field("WatermarkKey", "Watermark Key", "display_watermarkkey_element", "theme-settings", "section");
+  register_setting("section", "WatermarkKey");
 }
 add_action("admin_init", "display_theme_panel_fields");
 
@@ -60,6 +63,12 @@ function display_analyticsid_element(){
 function display_watermarkurl_element(){
 	?>
     <input type="text" name="WatermarkURL" id="WatermarkURL" value="<?php echo get_option('WatermarkURL'); ?>" />
+  <?php
+}
+
+function display_watermarkkey_element(){
+	?>
+    <input type="text" name="WatermarkKey" id="WatermarkKey" value="<?php echo get_option('WatermarkKey'); ?>" />
   <?php
 }
 ?>
