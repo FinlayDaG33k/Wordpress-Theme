@@ -9,7 +9,7 @@
     ?>" />
 
 <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/inc/css/bootstrap.min.css" type="text/css" media="screen,projection" />
-<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/style.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/style.css?nocache=true" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/inc/css/font-awesome.min.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/inc/css/prism.cssn.css" type="text/css" />
 <script type="text/javascript" src="<?php bloginfo("template_url"); ?>/inc/js/jquery.min.js"></script>
