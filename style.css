@@ -225,8 +225,10 @@ p.logged-in-as {
 }
 
 .panel-body img{
-	max-height: 100%;
-  max-width: 100%;
+	max-height: 250px;
+  max-width: 250px;
+  padding-bottom:10px;
+	padding-top:10px;
 }
 
 /* Flexbox */
@@ -279,8 +281,7 @@ p.logged-in-as {
   box-shadow: none;
   margin:0;
 	padding: 0;
-  padding-bottom:10px;
-	padding-top:10px;
+
 }
 
 .caption h4 {
